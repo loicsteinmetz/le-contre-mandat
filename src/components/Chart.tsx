@@ -23,6 +23,7 @@ const Chart: FC<Props> = ({select}) => {
             resizeDivs(json);
             initBoxes(json);
         });
+        // eslint-disable-next-line
     }, [select])
 
     const resizeDivs = (json: any) => {
