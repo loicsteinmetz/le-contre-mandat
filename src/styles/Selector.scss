@@ -1,0 +1,93 @@
+@import './globals/colors';
+
+.selector {
+  width: 100%;
+
+  &__arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -250px;
+
+    &__arrow {
+      transition: transform 100ms, opacity 200ms;
+
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      &--inactive {
+        opacity: 0.3;
+
+        &:hover {
+          transform: scale(1);
+          cursor: initial;
+        }
+      }
+    }
+  }
+
+  &__timeline {
+    display: flex;
+    justify-content: center;
+
+    &__line {
+      width: 90px;
+      border-top : 1px solid $grey;
+    }
+
+    &__year {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -4px;
+
+      &__icon {
+        border: 3px solid $grey;
+        border-radius: 100px;
+        width: 3px;
+        height: 3px;
+        transition: transform 200ms, background-color 200ms;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover .selector__timeline__year__icon {
+        transform: scale(1.5);
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 18px;
+        color: $grey;
+        transition: color 200ms;
+      }
+
+      &--active {
+
+        .selector__timeline__year__icon {
+          border: none;
+          background-color: $black;
+          height: 13px;
+          width: 13px;
+          box-shadow: 0 0 5px $shadow-dark;
+        }
+
+        &:hover .selector__timeline__year__icon {
+          transform: none;
+        }
+
+        p {
+          color: $black;
+          font-weight: bold;
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+}

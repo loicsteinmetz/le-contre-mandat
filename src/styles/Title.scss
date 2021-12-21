@@ -1,0 +1,20 @@
+@import './globals/colors';
+
+.title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  &--blue, &--red {
+    font-weight: bold;
+    font-size: 100px;
+  }
+
+  &--blue {
+    color: $blue;
+  }
+
+  &--red {
+    color: $red-light;
+  }
+}

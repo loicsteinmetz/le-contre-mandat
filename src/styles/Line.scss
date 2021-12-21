@@ -1,0 +1,23 @@
+@import './globals/colors';
+
+.line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+  opacity: 0.85;
+
+  &__drawing {
+    border-top: 1px solid $white;
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  &__logo {
+    height: 30px;
+
+    &__image {
+      height: 100%;
+    }
+  }
+}

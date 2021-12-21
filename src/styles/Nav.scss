@@ -1,0 +1,29 @@
+@import './globals/colors';
+
+.nav {
+  display: flex;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px $shadow;
+  position: fixed;
+  background-color: $white;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  & div {
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & h1 {
+    margin-left: 30px;
+    font-weight: bold;
+    color: $blue;
+  }
+}

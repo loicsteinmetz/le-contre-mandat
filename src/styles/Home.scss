@@ -1,0 +1,59 @@
+@import "./globals/colors";
+
+.home {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient($red-light, $red);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+
+  &__logo {
+    height: 200px;
+    margin-bottom: 50px;
+
+    &__image {
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    color: $white;
+    font-size: 85px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: $white;
+    font-size: 35px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__action {
+
+    &__button {
+      color: $white;
+      font-size: 26px;
+      font-weight: bold;
+      padding: 15px 40px;
+      background-color: $blue;
+      border: none;
+      border-radius: 10px;
+      transition: background-color 100ms;
+      box-shadow: $shadow 0 15px 20px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $blue-light;
+      }
+    }
+  }
+}
