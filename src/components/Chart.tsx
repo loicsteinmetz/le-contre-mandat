@@ -51,7 +51,7 @@ const Chart: FC<Props> = ({select}) => {
         for (let i = 0; i < 5; i++) {
             if (sorted[i]) {
                 divs[5 - i].style.height = (400) / total * sorted[i].amount + 'px';
-                divs[5 - i].style.marginBottom = '5px';
+                divs[5 - i].style.marginTop = '5px';
             }
         }
     }
