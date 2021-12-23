@@ -1,37 +1,131 @@
 {
   "incomes": [
     {
-      "amount": 1,
-      "label": "Lorem ipsum",
-      "ref": "18-a-1"
+      "amount": 10,
+      "label": "Nouvel impôt sur le revenu",
+      "ref": 29
     },
     {
-      "amount": 2,
-      "label": "Lorem ipsum",
-      "ref": "18-a-2"
+      "amount": 9,
+      "label": "Nouveaux financements pour le système social",
+      "ref": 31
     },
     {
       "amount": 3,
-      "label": "Lorem ipsum",
-      "ref": "18-a-3"
+      "label": "Renforcement de l’ISF et des droits de succession",
+      "ref": 32
+    },
+    {
+      "amount": 14,
+      "label": "Divers",
+      "ref": 33
+    },
+    {
+      "amount": 38,
+      "label": "Abrogation des niches fiscales et sociales inutiles",
+      "ref": 34
+    },
+    {
+      "amount": 11,
+      "label": "Abrogation du CICE et du Pacte de responsabilité",
+      "ref": 38
+    },
+    {
+      "amount": 55,
+      "label": "Relance de l'activité",
+      "ref": 36
     }
   ],
   "outcomes": [
     {
-      "amount": 1,
-      "label": "Lorem ipsum",
-      "ref": "18-o-1"
+      "amount": 42.7,
+      "label": "Mission Solidarité, insertion et égalité des chances",
+      "ref": 39
     },
     {
-      "amount": 2,
-      "label": "Lorem ipsum",
-      "ref": "18-o-2"
+      "amount": 32,
+      "label": "Retraites",
+      "ref": 39
+    },
+    {
+      "amount": 22.3,
+      "label": "Mission Éducation, Recherche et Enseignement supérieur",
+      "ref": 40
+    },
+    {
+      "amount": 17,
+      "label": "Jeunesse",
+      "ref": 40
+    },
+    {
+      "amount": 11,
+      "label": "Enfance",
+      "ref": 40
+    },
+    {
+      "amount": 4.9,
+      "label": "Santé",
+      "ref": 41
+    },
+    {
+      "amount": 6.4,
+      "label": "Mission Travail et emploi",
+      "ref": 41
+    },
+    {
+      "amount": 16,
+      "label": "Revalorisation des salaires de la fonction publique",
+      "ref": 41
+    },
+    {
+      "amount": 6,
+      "label": "Revalorisation du smic",
+      "ref": 42
     },
     {
       "amount": 3,
-      "label": "Lorem ipsum",
-      "ref": "18-o-3"
+      "label": "Sécurité sociale intégrale",
+      "ref": 42
+    },
+    {
+      "amount": 2.5,
+      "label": "Mission Justice",
+      "ref": 42
+    },
+    {
+      "amount": 2,
+      "label": "Mission Défense",
+      "ref": 42
+    },
+    {
+      "amount": 16,
+      "label": "Revalorisation des salaires de la fonction publique",
+      "ref": 41
+    },
+    {
+      "amount": 2,
+      "label": "Mission Action extérieure de l’État",
+      "ref": 42
+    },
+    {
+      "amount": 1.7,
+      "label": "Mission Culture",
+      "ref": 43
+    },
+    {
+      "amount": 11,
+      "label": "Mission Agriculture",
+      "ref": 43
+    },
+    {
+      "amount": 0.355,
+      "label": "Mission Sécurité",
+      "ref": 43
+    },
+    {
+      "amount": 100,
+      "label": "Plan de relance",
+      "ref": 44
     }
-  ],
-  "text": "<h1 id='18-a-1'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p><h1 id='18-a-2'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p><h1 id='18-a-3'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p><h1 id='18-o-1'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p><h1 id='18-o-2'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p><h1 id='18-o-3'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p>"
+  ]
 }

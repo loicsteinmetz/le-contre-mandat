@@ -3,35 +3,34 @@
     {
       "amount": 1,
       "label": "Lorem ipsum",
-      "ref": "22-a-1"
+      "ref": 5
     },
     {
       "amount": 2,
       "label": "Lorem ipsum",
-      "ref": "22-a-2"
+      "ref": 10
     },
     {
       "amount": 3,
       "label": "Lorem ipsum",
-      "ref": "22-a-3"
+      "ref": 15
     }
   ],
   "outcomes": [
     {
       "amount": 1,
       "label": "Lorem ipsum",
-      "ref": "22-o-1"
+      "ref": 20
     },
     {
       "amount": 2,
       "label": "Lorem ipsum",
-      "ref": "22-o-2"
+      "ref": 25
     },
     {
       "amount": 3,
       "label": "Lorem ipsum",
-      "ref": "22-o-3"
+      "ref": 30
     }
-  ],
-  "text": "<h1 id='22-a-1'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p><h1 id='22-a-2'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p><h1 id='22-a-3'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p><h1 id='22-o-1'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p><h1 id='22-o-2'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p><h1 id='22-o-3'>Lorem ipsum</h1><h2>Lorem ipsum</h2><p>Lorem ipsum</p>"
+  ]
 }

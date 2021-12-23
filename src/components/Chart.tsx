@@ -6,7 +6,7 @@ interface Props {
     select: number;
 }
 
-type Flux = { amount: number, label: string, ref: string };
+type Flux = { amount: number, label: string, ref: number };
 
 const Chart: FC<Props> = ({select}) => {
     const incomes = useRef<HTMLDivElement>(null);
@@ -23,8 +23,18 @@ const Chart: FC<Props> = ({select}) => {
             resizeDivs(json);
             initBoxes(json);
         });
+        initDetailsButton();
         // eslint-disable-next-line
     }, [select])
+
+    const initDetailsButton = () => {
+        const btn: any = document.querySelector('.chart__infos');
+        btn.onclick = () => {
+            const doc: any = document.querySelector('.doc');
+            doc!.setAttribute('data', doc!.getAttribute('data')!.split('#pagemode=bookmarks&page=')[0] + '#pagemode=bookmarks&page=1');
+            window.scrollTo({top: $('.doc').offset()!.top - 110, left: 0, behavior: 'smooth'});
+        }
+    }
 
     const resizeDivs = (json: any) => {
         doResizeDivs(json.incomes, incomeDivs());
@@ -32,32 +42,40 @@ const Chart: FC<Props> = ({select}) => {
     }
 
     const doResizeDivs = (jsonData: any, divs: any) => {
-        divs.forEach((outcomeDiv: HTMLDivElement) => outcomeDiv.style.height = '0');
-        const total = jsonData.reduce((acc: number, obj: Flux) => {
-            return acc + obj.amount;
-        }, 0)
-        const sortedOutcomes = jsonData.sort((a: Flux, b: Flux) => b.amount - a.amount)
-        sortedOutcomes.forEach((outcome: Flux, index: number) => {
-            divs[9 - index].style.height = 450 / total * outcome.amount + 'px';
-        });
+        divs.forEach((div: HTMLDivElement) => div.style.height = '0');
+        const sorted = jsonData.sort((a: Flux, b: Flux) => b.amount - a.amount)
+        let total = 0;
+        for (let i = 0; i < 5; i++) {
+            if (sorted[i]) total += sorted[i].amount;
+        }
+        for (let i = 0; i < 5; i++) {
+            if (sorted[i]) {
+                divs[5 - i].style.height = (400) / total * sorted[i].amount + 'px';
+                divs[5 - i].style.marginBottom = '5px';
+            }
+        }
     }
 
     const initBoxes = (json: any) => {
-        doInitBoxes(json.incomes, incomeBoxes());
-        doInitBoxes(json.outcomes, outcomeBoxes());
+        doInitBoxes(json.incomes, incomeBoxes(), 'Recettes attendues');
+        doInitBoxes(json.outcomes, outcomeBoxes(), 'Coût attendu');
     }
 
-    const doInitBoxes = (jsonData: any, boxes: any) => {
+    const doInitBoxes = (jsonData: any, boxes: any, amountPrefix: string) => {
         boxes.forEach((box: any) => box.innerHTML = '');
-        jsonData.forEach((data: Flux, index: number) => {
-            boxes[9 - index].innerHTML = `<i></i><h1>${data.label}</h1><p>Recettes attendues : ${data.amount} milliard(s)</p><button>Voir plus</button>`;
-            boxes[9 - index].querySelector('i').addEventListener('click', () => {
-                resetBoxes();
-            })
-            boxes[9 - index].querySelector('button').addEventListener('click', () => {
-                window.scrollTo({top: $(`#${data.ref}`).offset()!.top - 110, left: 0, behavior: 'smooth'});
-            })
-        });
+        for (let i = 0; i < 5; i++) {
+            if (jsonData[i]) {
+                boxes[5 - i].innerHTML = `<i></i><h1>${jsonData[i].label}</h1><p>${amountPrefix} : ${jsonData[i].amount} milliard(s)</p><button>Voir plus</button>`;
+                boxes[5 - i].querySelector('i').addEventListener('click', () => {
+                    resetBoxes();
+                })
+                boxes[5 - i].querySelector('button').addEventListener('click', () => {
+                    const doc: any = document.querySelector('.doc');
+                    doc!.setAttribute('data', doc!.getAttribute('data')!.split('#pagemode=bookmarks&page=')[0] + `#pagemode=bookmarks&page=${jsonData[i].ref}`)
+                    window.scrollTo({top: $('.doc').offset()!.top - 110, left: 0, behavior: 'smooth'});
+                })
+            }
+        }
     }
 
     const initEvents = () => {
@@ -89,21 +107,24 @@ const Chart: FC<Props> = ({select}) => {
 
     return (
         <div className="chart">
-            <div className={'chart__incomes'} ref={incomes}>
-                {Array.from(Array(10), (e, i) => (
-                    <div key={i}>
-                        <div className={'chart__incomes__box'}/>
-                        <div className={'chart__incomes__income'}/>
-                    </div>
-                ))}
-            </div>
-            <div className={'chart__outcomes'} ref={outcomes}>
-                {Array.from(Array(10), (e, i) => (
-                    <div key={i}>
-                        <div className={'chart__outcomes__box'}/>
-                        <div className={'chart__outcomes__outcome'}/>
-                    </div>
-                ))}
+            <button className={'chart__infos'}>Toutes les mesures</button>
+            <div className={'chart__flux'}>
+                <div className={'chart__incomes'} ref={incomes}>
+                    {Array.from(Array(6), (e, i) => (
+                        <div key={i}>
+                            <div className={'chart__incomes__box'}/>
+                            <div className={'chart__incomes__income'}/>
+                        </div>
+                    ))}
+                </div>
+                <div className={'chart__outcomes'} ref={outcomes}>
+                    {Array.from(Array(6), (e, i) => (
+                        <div key={i}>
+                            <div className={'chart__outcomes__box'}/>
+                            <div className={'chart__outcomes__outcome'}/>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

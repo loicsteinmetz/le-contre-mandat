@@ -3,7 +3,7 @@ import Nav from './Nav';
 import Title from './Title';
 import Chart from './Chart';
 import Selector from './Selector';
-import TextContent from './TextContent';
+import Doc from './Doc';
 import '../styles/Main.scss';
 import Line from './Line';
 import $ from 'jquery';
@@ -25,17 +25,15 @@ const Main: FC = () => {
 
     useEffect(() => {
         const scrollBtn: any = document.querySelector('.main__scroll-top');
-        const element = $('.chart')
         const w = $(window);
         window.addEventListener('scroll', () => {
-            const topElement = element.offset()!.top;
-            const bottomElement = element.offset()!.top + element.outerHeight()!;
-            const bottomScreen = w.scrollTop()! + w.innerHeight()!;
             const topScreen = w.scrollTop()!;
-            if ((bottomScreen > topElement) && (topScreen < bottomElement)) {
-                scrollBtn.style.opacity = '0';
-            } else {
+            if (topScreen > 0 && scrollBtn.style.opacity !== '1') {
+                scrollBtn.style.display = 'block'
                 scrollBtn.style.opacity = '1';
+            } else if (topScreen === 0 && scrollBtn.style.opacity !== '0') {
+                scrollBtn.style.display = 'none';
+                scrollBtn.style.opacity = '0';
             }
         });
         scrollBtn.addEventListener('click', () => {
@@ -59,7 +57,7 @@ const Main: FC = () => {
                 onSelectLeft={onSelectLeft}
                 onSelectRight={onSelectRight}
             />
-            <TextContent select={year}/>
+            <Doc select={year}/>
             <div className={'main__scroll-top'}/>
         </div>
     );
