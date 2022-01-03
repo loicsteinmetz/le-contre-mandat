@@ -6,8 +6,6 @@ interface Props {
     select: number;
 }
 
-type Flux = { amount: number, label: string, ref: number };
-
 const Chart: FC<Props> = ({select}) => {
     const incomes = useRef<HTMLDivElement>(null);
     const incomeDivs: any = () => incomes.current!.querySelectorAll('.chart__incomes__income');
@@ -30,9 +28,7 @@ const Chart: FC<Props> = ({select}) => {
     const initDetailsButton = () => {
         const btn: any = document.querySelector('.chart__infos');
         btn.onclick = () => {
-            const doc: any = document.querySelector('.doc');
-            doc!.setAttribute('data', doc!.getAttribute('data')!.split('#pagemode=bookmarks&page=')[0] + '#pagemode=bookmarks&page=1');
-            window.scrollTo({top: $('.doc').offset()!.top - 110, left: 0, behavior: 'smooth'});
+            window.scrollTo({top: $('.detail').offset()!.top - 110, left: 0, behavior: 'smooth'});
         }
     }
 

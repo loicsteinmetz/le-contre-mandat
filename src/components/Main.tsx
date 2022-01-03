@@ -7,6 +7,7 @@ import Doc from './Doc';
 import '../styles/Main.scss';
 import Line from './Line';
 import $ from 'jquery';
+import Detail from './Detail';
 
 const Main: FC = () => {
     const [year, setYear] = useState(18);
@@ -57,6 +58,8 @@ const Main: FC = () => {
                 onSelectLeft={onSelectLeft}
                 onSelectRight={onSelectRight}
             />
+            <Detail select={year}/>
+            <Line/>
             <Doc select={year}/>
             <div className={'main__scroll-top'}/>
         </div>
