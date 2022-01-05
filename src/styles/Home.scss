@@ -14,8 +14,8 @@
   padding: 10%;
 
   &__logo {
-    height: 200px;
-    margin-bottom: 50px;
+    height: 125px;
+    margin-bottom: 40px;
 
     &__image {
       height: 100%;
@@ -37,7 +37,24 @@
     text-align: center;
   }
 
+  &__description {
+    width: 60%;
+
+    &__content {
+      margin-bottom: 10px;
+      color: $white;
+      text-align: center;
+
+      & a {
+        font-weight: bold;
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+
   &__action {
+    margin-bottom: 50px;
 
     &__button {
       color: $white;
