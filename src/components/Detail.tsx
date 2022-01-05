@@ -1,5 +1,6 @@
 import {FC, useEffect, useState} from 'react';
 import '../styles/Detail.scss';
+import $ from 'jquery';
 
 interface Props {
     select: number;
@@ -9,13 +10,24 @@ const Detail: FC<Props> = ({select}) => {
     const [incomes, setIncomes] = useState<Flux[]>()
     const [outcomes, setOutcomes] = useState<Flux[]>()
 
+    const initRefs = (json: any) => {
+        const itemsRefs = document.querySelectorAll('.detail__flux__link__icon');
+        const flux = [...json.incomes, ...json.outcomes];
+        const doc = document.querySelector('.doc');
+        flux.forEach((f: Flux, i) => {
+            itemsRefs[i].addEventListener('click', () => {
+                doc!.setAttribute('data', doc!.getAttribute('data')!.split('#pagemode=bookmarks&page=')[0] + `#pagemode=bookmarks&page=${f.ref}`)
+                window.scrollTo({top: $('.doc').offset()!.top - 110, left: 0, behavior: 'smooth'});
+            })
+        })
+    }
+
     useEffect(() => {
         import(`../data/${select}.json`).then(json => {
             setIncomes(json.incomes);
             setOutcomes(json.outcomes);
+            initRefs(json);
         });
-
-        // TODO : initialisation des liens vers le doc pdf
     }, [select]);
 
     const displayFlux = (f: Flux) => {
