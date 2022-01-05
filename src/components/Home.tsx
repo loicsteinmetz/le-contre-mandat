@@ -10,7 +10,7 @@ const Home: FC<Props> = ({onAction}) => {
     return (
         <div className="home">
             <div className={'home__logo'}><img className={'home__logo__image'} src={'/logo.png'} alt={'L\'avenir en commun'}/></div>
-            <h1 className={'home__title'}>Le contre mandat</h1>
+            <h1 className={'home__title'}>Le contre-mandat</h1>
             <h2 className={'home__subtitle'}>2017-2022 : Le mandat alternatif de la France Insoumise</h2>
             <Line/>
             <div className={'home__action'}>

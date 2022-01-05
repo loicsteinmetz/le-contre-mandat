@@ -11,7 +11,7 @@ const App: FC = () => {
     }
 
     return (
-        <div>
+        <div className={'app'}>
             {isMainDisplayed ? <Main/> : <Home onAction={displayMain}/>}
         </div>
     );
