@@ -1,8 +1,26 @@
 @import "./globals/responsive";
+@import "./globals/colors";
 
 .doc {
   width: 100%;
   margin-top: 40px;
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+
+    &:first-child {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    a {
+      font-family: 'Roboto', sans-serif;
+      color: $black;
+      font-weight: bold;
+    }
+  }
 
   @include extra-small {
     width: 90%;
