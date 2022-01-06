@@ -28,7 +28,9 @@ const Chart: FC<Props> = ({select}) => {
     const initDetailsButton = () => {
         const btn: any = document.querySelector('.chart__infos');
         btn.onclick = () => {
-            window.scrollTo({top: $('.detail').offset()!.top - 110, left: 0, behavior: 'smooth'});
+            $('html, body').animate({
+                scrollTop: $('.detail').offset()!.top - ($(window).width()! <= 700 ? 70 : 110)
+            }, 500);
         }
     }
 
@@ -67,8 +69,10 @@ const Chart: FC<Props> = ({select}) => {
                 })
                 boxes[5 - i].querySelector('button').addEventListener('click', () => {
                     const doc: any = document.querySelector('.doc');
-                    doc!.setAttribute('data', doc!.getAttribute('data')!.split('#pagemode=bookmarks&page=')[0] + `#pagemode=bookmarks&page=${jsonData[i].ref}`)
-                    window.scrollTo({top: $('.doc').offset()!.top - 110, left: 0, behavior: 'smooth'});
+                    doc!.setAttribute('data', doc!.getAttribute('data')!.split('#pagemode=bookmarks&page=')[0] + `#pagemode=bookmarks&page=${jsonData[i].ref}`);
+                    $('html, body').animate({
+                        scrollTop: $('.doc').offset()!.top - ($(window).width()! <= 700 ? 70 : 110)
+                    }, 500);
                 })
             }
         }

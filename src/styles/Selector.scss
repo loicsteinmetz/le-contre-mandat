@@ -1,4 +1,5 @@
 @import './globals/colors';
+@import "./globals/responsive";
 
 .selector {
   margin-top: 15px;
@@ -39,7 +40,7 @@
     justify-content: center;
 
     &__line {
-      width: 90px;
+      width: 80px;
       border-top : 1px solid $grey;
     }
 
@@ -92,6 +93,45 @@
           font-weight: bold;
           margin-top: 7px;
         }
+      }
+    }
+  }
+
+  @include small {
+    &__arrows {
+      width: 500px;
+    }
+
+    &__timeline {
+
+      &__line {
+        width: 70px;
+      }
+    }
+  }
+
+  @include extra-small {
+    &__arrows {
+      width: 500px;
+      top: -608px;
+      transform: scale(0.6);
+
+      &:hover {
+        transform: scale(0.6);
+      }
+    }
+
+    &__timeline {
+      &__year {
+        width: 30px;
+
+        p {
+          font-size: 14px;
+        }
+      }
+
+      &__line {
+        width: 25px;
       }
     }
   }

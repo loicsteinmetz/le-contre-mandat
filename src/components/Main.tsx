@@ -38,7 +38,9 @@ const Main: FC = () => {
             }
         });
         scrollBtn.addEventListener('click', () => {
-            window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
         });
     }, [])
 

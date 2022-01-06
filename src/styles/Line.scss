@@ -1,4 +1,5 @@
 @import './globals/colors';
+@import "./globals/responsive";
 
 .line {
   display: flex;
@@ -19,5 +20,9 @@
     &__image {
       height: 100%;
     }
+  }
+
+  @include extra-small {
+    margin-bottom: 20px;
   }
 }

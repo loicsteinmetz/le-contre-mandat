@@ -1,4 +1,5 @@
 @import './globals/colors';
+@import "./globals/responsive";
 
 .nav {
   display: flex;
@@ -25,5 +26,19 @@
     margin-left: 30px;
     font-weight: bold;
     color: $blue;
+  }
+
+  @include extra-small {
+    height: 45px;
+
+    img {
+      height: 25px
+    }
+
+    h1 {
+      font-size: 20px;
+      height: 100%;
+      margin-left: 15px;
+    }
   }
 }

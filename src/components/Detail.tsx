@@ -17,7 +17,9 @@ const Detail: FC<Props> = ({select}) => {
         flux.forEach((f: Flux, i) => {
             itemsRefs[i].addEventListener('click', () => {
                 doc!.setAttribute('data', doc!.getAttribute('data')!.split('#pagemode=bookmarks&page=')[0] + `#pagemode=bookmarks&page=${f.ref}`)
-                window.scrollTo({top: $('.doc').offset()!.top - 110, left: 0, behavior: 'smooth'});
+                $('html, body').animate({
+                    scrollTop: $('.doc').offset()!.top - ($(window).width()! <= 700 ? 70 : 110)
+                }, 500);
             })
         })
     }

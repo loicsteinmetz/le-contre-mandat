@@ -1,4 +1,5 @@
 @import './globals/colors';
+@import "./globals/responsive";
 
 .title {
   text-align: center;
@@ -16,5 +17,11 @@
 
   &--red {
     color: $red-light;
+  }
+
+  @include extra-small {
+    &--blue, &--red {
+      font-size: 70px;
+    }
   }
 }

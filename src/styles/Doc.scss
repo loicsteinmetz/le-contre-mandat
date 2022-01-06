@@ -1,5 +1,10 @@
+@import "./globals/responsive";
+
 .doc {
   width: 100%;
   margin-top: 40px;
-  height: 800px;
+
+  @include extra-small {
+    width: 90%;
+  }
 }
