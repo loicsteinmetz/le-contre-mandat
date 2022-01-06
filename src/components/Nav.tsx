@@ -8,7 +8,7 @@ const Nav: FC = () => {
                 <div>
                     <img src={'/logo-red.png'} alt={'L\'avenir en commun'}/>
                 </div>
-                <h1>Le contre mandat</h1>
+                <h1>Le contre-mandat</h1>
             </div>
         </div>
     );
