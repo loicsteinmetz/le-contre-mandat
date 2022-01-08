@@ -12,25 +12,6 @@
     display: flex;
   }
 
-  &__infos {
-    margin-bottom: 20px;
-    width: 250px;
-    padding: 10px 0;
-    background-color: $white;
-    border: 1px solid $black;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: $black;
-    opacity: 0.5;
-    transition: opacity 300ms;
-
-    &:hover {
-      cursor: pointer;
-      opacity: 0.9;
-    }
-  }
-
   &__incomes, &__outcomes {
     margin: 0 25px;
     display: flex;
@@ -38,14 +19,35 @@
     justify-content: flex-end;
     z-index: 5;
 
+    &__label {
+      font-size: 14px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid;
+      font-weight: bold;
+    }
+
     &__income, &__outcome {
       width: 125px;
       height: 0;
       transition: height 200ms;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:hover {
         opacity: 0.5;
         cursor: pointer;
+      }
+
+      &__label {
+        text-align: center;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 10px;
+        padding: 0 10px;
       }
     }
 
@@ -100,6 +102,14 @@
         }
       }
     }
+  }
+
+  .chart__incomes__label {
+    color: $blue;
+  }
+
+  .chart__outcomes__label {
+    color: $red;
   }
 
   .chart__incomes__income {

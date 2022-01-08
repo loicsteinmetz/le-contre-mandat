@@ -2,7 +2,7 @@
 @import "./globals/responsive";
 
 .selector {
-  margin-top: 15px;
+  margin-top: -15px;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: -645px;
+    top: -615px;
 
     &__arrow {
       transition: transform 100ms, opacity 200ms;
@@ -113,7 +113,7 @@
   @include extra-small {
     &__arrows {
       width: 500px;
-      top: -608px;
+      top: -575px;
       transform: scale(0.6);
 
       &:hover {

@@ -3,6 +3,7 @@
     {
       "amount": 10,
       "label": "Nouvel impôt sur le revenu",
+      "short": "Nouvel impôt",
       "ref": 29
     },
     {
@@ -23,11 +24,13 @@
     {
       "amount": 38,
       "label": "Abrogation des niches fiscales et sociales inutiles",
+      "short": "Niches fiscales",
       "ref": 34
     },
     {
       "amount": 11,
       "label": "Abrogation du CICE et du Pacte de responsabilité",
+      "short": "CICE",
       "ref": 38
     },
     {
@@ -40,6 +43,7 @@
     {
       "amount": 42.7,
       "label": "Mission Solidarité, insertion et égalité des chances",
+      "short": "Solidarité",
       "ref": 39
     },
     {
@@ -50,6 +54,7 @@
     {
       "amount": 22.3,
       "label": "Mission Éducation, Recherche et Enseignement supérieur",
+      "short": "Éducation",
       "ref": 40
     },
     {

@@ -18,28 +18,18 @@ const Chart: FC<Props> = ({select}) => {
         resetBoxes();
         initEvents();
         import(`../data/${select}.json`).then(json => {
-            resizeDivs(json);
+            initDivs(json);
             initBoxes(json);
         });
-        initDetailsButton();
         // eslint-disable-next-line
     }, [select])
 
-    const initDetailsButton = () => {
-        const btn: any = document.querySelector('.chart__infos');
-        btn.onclick = () => {
-            $('html, body').animate({
-                scrollTop: $('.detail').offset()!.top - ($(window).width()! <= 700 ? 70 : 110)
-            }, 500);
-        }
+    const initDivs = (json: any) => {
+        doInitDivs(json.incomes, incomeDivs());
+        doInitDivs(json.outcomes, outcomeDivs());
     }
 
-    const resizeDivs = (json: any) => {
-        doResizeDivs(json.incomes, incomeDivs());
-        doResizeDivs(json.outcomes, outcomeDivs());
-    }
-
-    const doResizeDivs = (jsonData: any, divs: any) => {
+    const doInitDivs = (jsonData: any, divs: any) => {
         divs.forEach((div: HTMLDivElement) => div.style.height = '0');
         const sorted = jsonData.sort((a: Flux, b: Flux) => b.amount - a.amount)
         let total = 0;
@@ -50,6 +40,7 @@ const Chart: FC<Props> = ({select}) => {
             if (sorted[i]) {
                 divs[5 - i].style.height = (400) / total * sorted[i].amount + 'px';
                 divs[5 - i].style.marginTop = '5px';
+                divs[5 - i].firstChild.innerHTML = sorted[i].short ? sorted[i].short : sorted[i].label;
             }
         }
     }
@@ -107,21 +98,26 @@ const Chart: FC<Props> = ({select}) => {
 
     return (
         <div className="chart">
-            <button className={'chart__infos'}>Toutes les mesures</button>
             <div className={'chart__flux'}>
                 <div className={'chart__incomes'} ref={incomes}>
+                    <h2 className={'chart__incomes__label'}>Recettes</h2>
                     {Array.from(Array(6), (e, i) => (
                         <div key={i}>
                             <div className={'chart__incomes__box'}/>
-                            <div className={'chart__incomes__income'}/>
+                            <div className={'chart__incomes__income'}>
+                                <p className={'chart__incomes__income__label'}/>
+                            </div>
                         </div>
                     ))}
                 </div>
                 <div className={'chart__outcomes'} ref={outcomes}>
+                    <h2 className={'chart__outcomes__label'}>Dépenses</h2>
                     {Array.from(Array(6), (e, i) => (
                         <div key={i}>
                             <div className={'chart__outcomes__box'}/>
-                            <div className={'chart__outcomes__outcome'}/>
+                            <div className={'chart__outcomes__outcome'}>
+                                <p className={'chart__outcomes__outcome__label'}/>
+                            </div>
                         </div>
                     ))}
                 </div>

@@ -32,6 +32,25 @@
     }
   }
 
+  &__infos {
+    margin-top: 30px;
+    width: 250px;
+    padding: 10px 0;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $black;
+    opacity: 0.5;
+    transition: opacity 300ms;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  }
+
   @include small {
     padding: 0 5% 25px 5%;
   }

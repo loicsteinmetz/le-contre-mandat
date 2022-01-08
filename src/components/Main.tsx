@@ -42,6 +42,13 @@ const Main: FC = () => {
                 scrollTop: 0
             }, 500);
         });
+        const btn: any = document.querySelector('.main__infos');
+        btn.onclick = () => {
+            $('html, body').animate({
+                scrollTop: $('.detail').offset()!.top - ($(window).width()! <= 700 ? 70 : 110)
+            }, 500);
+        }
+
     }, [])
 
     return (
@@ -60,6 +67,7 @@ const Main: FC = () => {
                 onSelectLeft={onSelectLeft}
                 onSelectRight={onSelectRight}
             />
+            <button className={'main__infos'}>Toutes les mesures</button>
             <Detail select={year}/>
             <Line/>
             <Doc select={year}/>

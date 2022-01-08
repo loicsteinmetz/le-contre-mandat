@@ -20,6 +20,8 @@
   }
 
   @include extra-small {
+    margin-top: 15px;
+
     &--blue, &--red {
       font-size: 70px;
     }

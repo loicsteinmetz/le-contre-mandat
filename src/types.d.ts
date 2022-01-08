@@ -1,1 +1,1 @@
-type Flux = { amount: number, label: string, ref: number };
+type Flux = { amount: number, label: string, ref: number, short?: string };
