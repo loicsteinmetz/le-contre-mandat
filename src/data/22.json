@@ -1,36 +1,107 @@
 {
   "incomes": [
     {
-      "amount": 1,
-      "label": "Lorem ipsum",
-      "ref": 5
+      "amount": 10,
+      "label": "Taxe sur les profiteurs de crise",
+      "ref": 11
     },
     {
-      "amount": 2,
-      "label": "Lorem ipsum",
-      "ref": 10
+      "amount": 33.7,
+      "label": "Suppression des niches fiscales néfastes et du CICE",
+      "short": "Niches ficales et CICE",
+      "ref": 13
     },
     {
-      "amount": 3,
-      "label": "Lorem ipsum",
+      "amount": 8,
+      "label": "Rétablissement et renforcement de l'ISF",
+      "short": "ISF",
       "ref": 15
+    },
+    {
+      "amount": 10,
+      "label": "Nouvel impôt sur le revenu",
+      "short": "Nouvel impôt",
+      "ref": 16
+    },
+    {
+      "amount": 5,
+      "label": "TVA sur le luxe",
+      "ref": 18
+    },
+    {
+      "amount": 5,
+      "label": "Droits de succession",
+      "ref": 19
+    },
+    {
+      "amount": 1.8,
+      "label": "Suppression de la flat tax",
+      "ref": 20
+    },
+    {
+      "amount": 8,
+      "label": "Taxe sur les transactions financières",
+      "ref": 22
+    },
+    {
+      "amount": 10,
+      "label": "Impôts de production",
+      "ref": 23
     }
   ],
   "outcomes": [
     {
+      "amount": 0,
+      "label": "Blocage des prix",
+      "ref": 26
+    },
+    {
+      "amount": 6,
+      "label": "Augmentation du SMIC à 1400€ net",
+      "ref": 28
+    },
+    {
+      "amount": 15,
+      "label": "RSA pour les jeunes et 300 000 \"emplois jeunes\"",
+      "short": "Plan jeunes",
+      "ref": 29
+    },
+    {
+      "amount": 28.5,
+      "label": "Lutte contre la pauvreté",
+      "short": "Pauvreté",
+      "ref": 31
+    },
+    {
       "amount": 1,
-      "label": "Lorem ipsum",
-      "ref": 20
+      "label": "Lutte contre les violences sexistes et sexuelles",
+      "ref": 32
+    },
+    {
+      "amount": 6,
+      "label": "Recrutement de 100 000 soignants",
+      "ref": 33
+    },
+    {
+      "amount": 25,
+      "label": "Revalorisation des rémunération dans la fonction publique",
+      "short": "Fonction publique",
+      "ref": 34
+    },
+    {
+      "amount": 4,
+      "label": "Garantie de l'emploi",
+      "ref": 36
     },
     {
       "amount": 2,
-      "label": "Lorem ipsum",
-      "ref": 25
+      "label": "Réforme de l'assurance chômage",
+      "ref": 37
     },
     {
-      "amount": 3,
-      "label": "Lorem ipsum",
-      "ref": 30
+      "amount": 200,
+      "label": "Transition écologique",
+      "ref": 38
     }
   ]
 }

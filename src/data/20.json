@@ -1,35 +1,129 @@
 {
   "incomes": [
     {
-      "amount": 1,
-      "label": "Lorem ipsum",
+      "amount": 6,
+      "label": "Rétablissement et renforcement de l’ISF et des droits de succession",
+      "short": "ISF et droits de succession",
+      "ref": 5
+    },
+    {
+      "amount": 5,
+      "label": "Augmentation de la TVA sur les biens de luxe de 20% à 33%",
+      "short": "TVA sur le luxe",
+      "ref": 5
+    },
+    {
+      "amount": 5,
+      "label": "Renforcement de la taxe sur les transactions financières et élargissement de son assiette",
+      "ref": 5
+    },
+    {
+      "amount": 1.8,
+      "label": "Abrogation de la flat tax",
+      "ref": 5
+    },
+    {
+      "amount": 0.150,
+      "label": "Rétablissement de la dernière tranche de la taxe sur les salaires",
+      "ref": 5
+    },
+    {
+      "amount": 8.5,
+      "label": "Suppression des niches fiscales qui nuisent à l’environnement",
+      "short": "Niches fiscales",
+      "ref": 5
+    },
+    {
+      "amount": 20,
+      "label": "Hausse des cotisations baissées suite à la transformation du Crédit Impôt Compétitivité Emploi (CICE)",
+      "short": "CICE",
+      "ref": 5
+    },
+    {
+      "amount": 6.5,
+      "label": "Abrogation du Crédit Impôt Recherche (CIR)",
+      "short": "Crédit Impôt Recherche",
+      "ref": 5
+    },
+    {
+      "amount": 5,
+      "label": "Imposition des hautes transactions immobilières",
       "ref": 5
     },
     {
       "amount": 2,
-      "label": "Lorem ipsum",
-      "ref": 10
+      "label": "Suppression de l’abattement sur les plus-values immobilières",
+      "ref": 5
     },
     {
-      "amount": 3,
-      "label": "Lorem ipsum",
-      "ref": 15
+      "amount": 1,
+      "label": "Abrogation des niches Scellier et Pinel",
+      "ref": 5
     }
   ],
   "outcomes": [
     {
+      "amount": 1.712,
+      "label": "Augmenter les effectifs et améliorer les condition de travail dans les services publics",
+      "ref": 9
+    },
+    {
+      "amount": 18.7,
+      "label": "Plan \"zéro SDF\"",
+      "ref": 10
+    },
+    {
+      "amount": 8.5,
+      "label": "Accès au train : 1000km gratuits pour chaque citoyen",
+      "short": "Transports",
+      "ref": 12
+    },
+    {
       "amount": 1,
-      "label": "Lorem ipsum",
+      "label": "Respecter nos engagements internationaux en matière de développement",
+      "ref": 14
+    },
+    {
+      "amount": 0.352,
+      "label": "Garantir la dignité de l’accueil des personnes migrantes",
+      "ref": 16
+    },
+    {
+      "amount": 0.0344,
+      "label": "En finir avec la paupérisation de la recherche française",
+      "ref": 18
+    },
+    {
+      "amount": 20.4,
+      "label": "Un vrai service public de la performance énergétique",
+      "short": "Ecologie",
       "ref": 20
     },
     {
-      "amount": 2,
-      "label": "Lorem ipsum",
-      "ref": 25
+      "amount": 1.102,
+      "label": "Lutter contre les violences faites aux femmes",
+      "ref": 22
     },
     {
-      "amount": 3,
-      "label": "Lorem ipsum",
+      "amount": 0.400,
+      "label": "Sortir les artistes de la précarité",
+      "ref": 24
+    },
+    {
+      "amount": 3.8,
+      "label": "Faire de l’accès à l’eau un droit",
+      "short": "Accès à l'eau",
+      "ref": 26
+    },
+    {
+      "amount": 0.245,
+      "label": "Prévention des risques industriels et naturels",
+      "ref": 28
+    },
+    {
+      "amount": 2.11,
+      "label": "Education nationale",
+      "short": "Education",
       "ref": 30
     }
   ]

@@ -1,36 +1,89 @@
 {
   "incomes": [
     {
-      "amount": 1,
-      "label": "Lorem ipsum",
-      "ref": 5
+      "amount": 10,
+      "label": "Fiscalité du capital",
+      "ref": 27
     },
     {
-      "amount": 2,
-      "label": "Lorem ipsum",
-      "ref": 10
+      "amount": -1,
+      "label": "Taxe sur les dividendes",
+      "ref": 27
     },
     {
-      "amount": 3,
-      "label": "Lorem ipsum",
-      "ref": 15
+      "amount": 20,
+      "label": "Suppression du CICE",
+      "short": "CICE",
+      "ref": 29
+    },
+    {
+      "amount": 36,
+      "label": "Taxe sur les transactions financières",
+      "ref": 28
+    },
+    {
+      "amount": -1,
+      "label": "Contribution exceptionnelle",
+      "ref": 28
+    },
+    {
+      "amount": 36,
+      "label": "S'attaquer à l'évasion fiscale",
+      "short": "Evasion fiscale",
+      "ref": 29
+    },
+    {
+      "amount": 15,
+      "label": "Supprimer les principales niches fiscales anti-sociales et anti-écologiques",
+      "short": "Niches fiscales",
+      "ref": 29
+    },
+    {
+      "amount": -1,
+      "label": "Réévaluer la contribution de la France à l'UE",
+      "ref": 31
+    },
+    {
+      "amount": -1,
+      "label": "S'émanciper du chantage à la dette",
+      "ref": 31
     }
   ],
   "outcomes": [
     {
-      "amount": 1,
-      "label": "Lorem ipsum",
-      "ref": 20
+      "amount": 15.7,
+      "label": "Emploi",
+      "ref": 10
+    },
+    {
+      "amount": 15,
+      "label": "Santé",
+      "ref": 12
     },
     {
       "amount": 2,
-      "label": "Lorem ipsum",
-      "ref": 25
+      "label": "Masques gratuits",
+      "ref": 14
     },
     {
-      "amount": 3,
-      "label": "Lorem ipsum",
-      "ref": 30
+      "amount": 53.8,
+      "label": "Ecologie",
+      "ref": 16
+    },
+    {
+      "amount": 2.4,
+      "label": "Enseignement et recherche",
+      "ref": 20
+    },
+    {
+      "amount": 43.7,
+      "label": "Pauvreté",
+      "ref": 22
+    },
+    {
+      "amount": 0.730,
+      "label": "Violences, justice et droits humains",
+      "ref": 24
     }
   ]
 }

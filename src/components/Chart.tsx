@@ -14,6 +14,8 @@ const Chart: FC<Props> = ({select}) => {
     const outcomeDivs: any = () => outcomes.current!.querySelectorAll('.chart__outcomes__outcome');
     const outcomeBoxes: any = () => outcomes.current!.querySelectorAll('.chart__outcomes__box');
 
+    const displayAmount = (a: number) => a >= 1 ? `${a} milliard(s)` : `${a * 1000} million(s)`
+
     useEffect(() => {
         resetBoxes();
         initEvents();
@@ -31,17 +33,16 @@ const Chart: FC<Props> = ({select}) => {
 
     const doInitDivs = (jsonData: any, divs: any) => {
         divs.forEach((div: HTMLDivElement) => div.style.height = '0');
-        const sorted = jsonData.sort((a: Flux, b: Flux) => b.amount - a.amount)
+        const sorted = jsonData.filter((a: Flux) => a.amount > 0).sort((a: Flux, b: Flux) => b.amount - a.amount)
         let total = 0;
         for (let i = 0; i < 5; i++) {
             if (sorted[i]) total += sorted[i].amount;
         }
         for (let i = 0; i < 5; i++) {
-            if (sorted[i]) {
-                divs[5 - i].style.height = (400) / total * sorted[i].amount + 'px';
-                divs[5 - i].style.marginTop = '5px';
-                divs[5 - i].firstChild.innerHTML = sorted[i].short ? sorted[i].short : sorted[i].label;
-            }
+            const height = 400 / total * sorted[i].amount;
+            divs[5 - i].style.height = height + 'px';
+            divs[5 - i].style.marginTop = '5px';
+            divs[5 - i].firstChild.innerHTML = height > 15 ? (sorted[i].short ? sorted[i].short : sorted[i].label) : '';
         }
     }
 
@@ -52,9 +53,10 @@ const Chart: FC<Props> = ({select}) => {
 
     const doInitBoxes = (jsonData: any, boxes: any, amountPrefix: string) => {
         boxes.forEach((box: any) => box.innerHTML = '');
+        const sorted = jsonData.filter((a: Flux) => a.amount > 0).sort((a: Flux, b: Flux) => b.amount - a.amount)
         for (let i = 0; i < 5; i++) {
-            if (jsonData[i]) {
-                boxes[5 - i].innerHTML = `<i></i><h1>${jsonData[i].label}</h1><p>${amountPrefix} : ${jsonData[i].amount} milliard(s)</p><button>Voir plus</button>`;
+            if (sorted[i]) {
+                boxes[5 - i].innerHTML = `<i></i><h1>${sorted[i].label}</h1><p>${amountPrefix} : ${displayAmount(sorted[i].amount)} €</p><button>Voir plus</button>`;
                 boxes[5 - i].querySelector('i').addEventListener('click', () => {
                     resetBoxes();
                 })

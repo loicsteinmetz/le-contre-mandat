@@ -32,12 +32,14 @@ const Detail: FC<Props> = ({select}) => {
         });
     }, [select]);
 
+    const displayAmount = (a: number) => a >= 1 ? `${a} milliard(s)` : `${a * 1000} million(s)`
+
     const displayFlux = (f: Flux) => {
         return (
             <div className={'detail__flux'}>
                 <div className={'detail__flux__infos'}>
                     <h4 className={'detail__flux__infos__label'}>{f.label}</h4>
-                    <p className={'detail__flux__infos__amount'}>{f.amount} milliards €</p>
+                    {f.amount > 0 ? <p className={'detail__flux__infos__amount'}>{displayAmount(f.amount)} €</p> : null}
                 </div>
                 <div className={'detail__flux__link'}>
                     <i className={'detail__flux__link__icon'}/>

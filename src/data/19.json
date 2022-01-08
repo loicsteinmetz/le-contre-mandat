@@ -1,36 +1,112 @@
 {
   "incomes": [
     {
-      "amount": 1,
-      "label": "Lorem ipsum",
-      "ref": 5
+      "amount": 10,
+      "label": "Nouvel impôt sur le revenu",
+      "short": "Nouvel impôt",
+      "ref": 14
     },
     {
-      "amount": 2,
-      "label": "Lorem ipsum",
-      "ref": 10
-    },
-    {
-      "amount": 3,
-      "label": "Lorem ipsum",
+      "amount": 5,
+      "label": "TVA sur les produits de luxe",
+      "short": "TVA sur le luxe",
       "ref": 15
+    },
+    {
+      "amount": 8.5,
+      "label": "Fiscalité écologique",
+      "ref": 16
+    },
+    {
+      "amount": 14.5,
+      "label": "Imposition du capital",
+      "ref": 17
+    },
+    {
+      "amount": 13.85,
+      "label": "Suppression de niches fiscales coûteuses et inutiles",
+      "short": "Niches fiscales",
+      "ref": 19
     }
   ],
   "outcomes": [
     {
-      "amount": 1,
-      "label": "Lorem ipsum",
+      "amount": 7.1,
+      "label": "Solidarité, Insertion et Égalité des Chances",
+      "short": "Insertion",
       "ref": 20
     },
     {
-      "amount": 2,
-      "label": "Lorem ipsum",
-      "ref": 25
+      "amount": 2.74,
+      "label": "Éducation, Recherche et Enseignement Supérieur",
+      "ref": 20
+    },
+    {
+      "amount": 4,
+      "label": "Jeunesse",
+      "ref": 21
+    },
+    {
+      "amount": 2.37,
+      "label": "Cohésion des Territoires",
+      "ref": 21
+    },
+    {
+      "amount": 0.230,
+      "label": "Sport",
+      "ref": 21
     },
     {
       "amount": 3,
-      "label": "Lorem ipsum",
-      "ref": 30
+      "label": "Travail et Emploi",
+      "ref": 22
+    },
+    {
+      "amount": 4.9,
+      "label": "Revalorisation des salaires et embauches dans la fonction publique",
+      "ref": 22
+    },
+    {
+      "amount": 0.680,
+      "label": "Justice",
+      "ref": 23
+    },
+    {
+      "amount": 0.250,
+      "label": "Défense",
+      "ref": 24
+    },
+    {
+      "amount": 1.5,
+      "label": "Action extérieure de l'État",
+      "ref": 24
+    },
+    {
+      "amount": 0.150,
+      "label": "Culture",
+      "ref": 24
+    },
+    {
+      "amount": 5.9,
+      "label": "Agriculture",
+      "ref": 24
+    },
+    {
+      "amount": 14.5,
+      "label": "Solidarités",
+      "ref": 25
+    },
+    {
+      "amount": 43,
+      "label": "Plan d'investissement public par l'emprunt",
+      "short": "Plan d'investissement",
+      "ref": 26
+    },
+    {
+      "amount": 28,
+      "label": "Création d'un fond de solidarité interentreprises",
+      "short": "Fond de solidarité interentreprises",
+      "ref": 27
     }
   ]
 }
