@@ -7,17 +7,27 @@ interface Props {
 }
 
 const Doc: FC<Props> = ({select}) => {
-    const [height, setHeight] = useState($(window).height()! - ($(window).width()! <= 700 ? 100 : 130));
+    const getDocHeight = () => {
+        if (!navigator.userAgent.toLowerCase().includes('android')) {
+            return $(window).height()! - ($(window).width()! <= 700 ? 100 : 130)
+        } else {
+            return null;
+        }
+    }
+
+    const [height, setHeight] = useState(getDocHeight());
 
     window.addEventListener('resize', () => {
-        setHeight($(window).height()! - ($(window).width()! <= 700 ? 100 : 130));
+        setHeight(getDocHeight());
     })
 
     return (
-        <object className={'doc'} data={process.env['REACT_APP_CB_' + select]} style={{height}} type="application/pdf">
+        <object className={'doc'} data={'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + process.env['REACT_APP_CB_' + select]}
+                style={{height: height || 'inherit', paddingBottom: height ? 0 : 120}}
+                type="application/pdf">
             <p>Contre-budget 20{select}</p>
             <p>Impossible de visualiser le document sur Android</p>
-            <p>Le contre-budget 20{select} peut être consulté <a href={process.env['REACT_APP_CB_RES_' + select]} target={'_blank'} rel="noreferrer">ici</a>.</p>
+            <p><a href={process.env['REACT_APP_CB_' + select]} target={'_blank'} rel="noreferrer">Consulter ici le contre-budget 20{select}</a>.</p>
         </object>
     );
 }
