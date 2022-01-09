@@ -29,6 +29,7 @@ const Home: FC<Props> = ({onAction}) => {
                     état du mandat alternatif de la France Insoumise.</p>
             </div>
             <Networks marginTop={30} />
+            <div className={'home__spacing'} />
         </div>
     );
 }

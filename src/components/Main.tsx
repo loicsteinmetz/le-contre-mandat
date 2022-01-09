@@ -47,7 +47,7 @@ const Main: FC = () => {
         const btn: any = document.querySelector('.main__infos');
         btn.onclick = () => {
             $('html, body').animate({
-                scrollTop: $('.detail').offset()!.top - ($(window).width()! <= 700 ? 70 : 110)
+                scrollTop: $('.detail').offset()!.top - 70
             }, 500);
         }
 
