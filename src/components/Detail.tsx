@@ -14,9 +14,11 @@ const Detail: FC<Props> = ({select}) => {
         const itemsRefs = document.querySelectorAll('.detail__flux__link__icon');
         const flux = [...json.incomes, ...json.outcomes];
         const doc = document.querySelector('.doc');
+        const link = doc!.querySelectorAll('p')[3];
         flux.forEach((f: Flux, i) => {
             itemsRefs[i].addEventListener('click', () => {
                 doc!.setAttribute('data', doc!.getAttribute('data')!.split('#pagemode=bookmarks&page=')[0] + `#pagemode=bookmarks&page=${f.ref}`)
+                link!.innerHTML = `(${f.label} : p. ${f.ref})`
                 $('html, body').animate({
                     scrollTop: $('.doc').offset()!.top - ($(window).width()! <= 700 ? 70 : 110)
                 }, 500);

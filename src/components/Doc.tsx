@@ -27,7 +27,8 @@ const Doc: FC<Props> = ({select}) => {
                 type="application/pdf">
             <p>Contre-budget 20{select}</p>
             <p>Impossible de visualiser le document sur Android</p>
-            <p><a href={process.env['REACT_APP_CB_' + select]} target={'_blank'} rel="noreferrer">Consulter ici le contre-budget 20{select}</a>.</p>
+            <p><a href={process.env['REACT_APP_CB_' + select]} target={'_blank'} rel="noreferrer">Consulter ici le contre-budget 20{select}</a></p>
+            <p/>
         </object>
     );
 }

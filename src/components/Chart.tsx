@@ -62,7 +62,9 @@ const Chart: FC<Props> = ({select}) => {
                 })
                 boxes[5 - i].querySelector('button').addEventListener('click', () => {
                     const doc: any = document.querySelector('.doc');
-                    doc!.setAttribute('data', doc!.getAttribute('data')!.split('#pagemode=bookmarks&page=')[0] + `#pagemode=bookmarks&page=${jsonData[i].ref}`);
+                    const link = doc.querySelectorAll('p')[3];
+                    doc!.setAttribute('data', doc!.getAttribute('data')!.split('#pagemode=bookmarks&page=')[0] + `#pagemode=bookmarks&page=${sorted[i].ref}`);
+                    link.innerHTML = `(${sorted[i].label} : p. ${sorted[i].ref})`
                     $('html, body').animate({
                         scrollTop: $('.doc').offset()!.top - ($(window).width()! <= 700 ? 70 : 110)
                     }, 500);
