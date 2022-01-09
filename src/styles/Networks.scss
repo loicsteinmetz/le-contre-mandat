@@ -1,6 +1,8 @@
 @import "./globals/colors";
+@import "./globals/responsive";
 
 .networks {
+  text-align: center;
 
   .main & {
     filter: invert(0.5);
@@ -26,6 +28,18 @@
 
     &:hover img {
       transform: scale(1.1);
+    }
+  }
+
+  @include extra-small {
+    width: 90%;
+
+    a {
+      margin: 0 7px;
+    }
+
+    img {
+      width: 30px;
     }
   }
 }
