@@ -8,6 +8,7 @@ import '../styles/Main.scss';
 import Line from './Line';
 import $ from 'jquery';
 import Detail from './Detail';
+import Networks from './Networks';
 
 const Main: FC = () => {
     const [year, setYear] = useState(18);
@@ -68,6 +69,7 @@ const Main: FC = () => {
                 onSelectRight={onSelectRight}
             />
             <button className={'main__infos'}>Toutes les mesures</button>
+            <Networks marginTop={50} />
             <Detail select={year}/>
             <Line/>
             <Doc select={year}/>
