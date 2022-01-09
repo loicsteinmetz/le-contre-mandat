@@ -10,6 +10,7 @@ import $ from 'jquery';
 import Detail from './Detail';
 import Networks from './Networks';
 import Video from './Video';
+import Laec from './Laec';
 
 const Main: FC = () => {
     const [year, setYear] = useState(18);
@@ -76,6 +77,7 @@ const Main: FC = () => {
             <Line/>
             <Doc select={year}/>
             <div className={'main__scroll-top'}/>
+            <Laec />
         </div>
     );
 }

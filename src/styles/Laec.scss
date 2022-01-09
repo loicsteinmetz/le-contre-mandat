@@ -1,0 +1,175 @@
+@import './globals/colors';
+@import "./globals/responsive";
+
+.laec {
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $grey;
+    z-index: 10;
+    opacity: 0.5;
+  }
+
+  &__cta {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    right: 30%;
+    background-color: $white;
+    z-index: 11;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px $shadow;
+
+    &__text {
+      margin-bottom: 25px;
+
+      p {
+        margin-bottom: 10px;
+        text-align: center;
+
+        strong {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        margin: 0 20px;
+        border: none;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        color: $white;
+        font-weight: bold;
+        border-radius: 5px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &__contre-mandat {
+        background-color: $blue;
+
+        &:hover {
+          background-color: $blue-light;
+        }
+      }
+
+      &__laec {
+        background-color: $red;
+
+        &:hover {
+          background-color: $red-light;
+        }
+      }
+    }
+
+    &--mini {
+      position: fixed;
+      bottom: 50px !important;
+      left: 50px !important;
+      top: inherit !important;
+      right: inherit !important;
+      padding: inherit;
+      background-color: $white;
+      box-shadow: 0 3px 6px $shadow-medium;
+      height: 65px;
+      width: 65px;
+      border-radius: 50px;
+      z-index: 99;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      & .laec__cta__text, & .laec__cta__buttons, & .line {
+        display: none;
+      }
+
+      p {
+        height: 100%;
+        width: 100%;
+
+        a {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+        }
+      }
+
+      .blue, .red {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .blue {
+        color: $blue;
+      }
+
+      .red {
+        color: $red;
+      }
+    }
+  }
+
+  &__2022 {
+    display: none;
+  }
+
+  .transition {
+    transition: transform 100ms, padding 300ms, height 300ms, width 300ms;
+  }
+
+  @include medium {
+    &__cta {
+      left: 20%;
+      right: 20%;
+    }
+  }
+
+  @include small {
+    &__cta {
+      left: 10%;
+      right: 10%;
+    }
+  }
+
+  @include extra-small {
+    &__cta {
+      top: 10%;
+      left: 3%;
+      right: 3%;
+
+      &--mini {
+        left: 25px !important;
+      }
+
+      &__text {
+        font-size: 14px;
+      }
+
+      &__buttons {
+        flex-direction: column;
+
+        button {
+          margin: 10px 0;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
