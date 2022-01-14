@@ -26,7 +26,7 @@ const Laec: FC = () => {
                 <div className={'laec__cta__text'}>
                     <p>Le <strong>contre-mandat</strong> rassemble les contre-budgets présentés chaque année par le groupe parlementaire de la France Insoumise.
                     </p>
-                    <p>Les mesures présentées ne sont donc pas exhaustives comparées à celle de l'<strong>Avenir En Commun</strong>, le programme de Jean-Luc
+                    <p>Les mesures présentées ne sont donc pas exhaustives comparées à celles de l'<strong>Avenir En Commun</strong>, le programme de Jean-Luc
                         Mélenchon pour
                         2022</p>
                 </div>
