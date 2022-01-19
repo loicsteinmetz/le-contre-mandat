@@ -1,6 +1,7 @@
 import React, {FC, useState} from 'react';
 import '../styles/Doc.scss';
 import $ from 'jquery';
+import CONSTANTS from '../constants';
 
 interface Props {
     select: number;
@@ -22,12 +23,12 @@ const Doc: FC<Props> = ({select}) => {
     })
 
     return (
-        <object className={'doc'} data={'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + process.env['REACT_APP_CB_' + select]}
+        <object className={'doc'} data={'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + CONSTANTS['REACT_APP_CB_' + select]}
                 style={{height: height || 'inherit', paddingBottom: height ? 0 : 120}}
                 type="application/pdf">
             <p>Contre-budget 20{select}</p>
             <p>Impossible de visualiser le document sur Android</p>
-            <p><a href={process.env['REACT_APP_CB_' + select]} target={'_blank'} rel="noreferrer">Consulter ici le contre-budget 20{select}</a></p>
+            <p><a href={CONSTANTS['REACT_APP_CB_' + select]} target={'_blank'} rel="noreferrer">Consulter ici le contre-budget 20{select}</a></p>
             <p/>
         </object>
     );

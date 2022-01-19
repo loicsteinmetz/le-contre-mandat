@@ -2,6 +2,7 @@ import {FC, useEffect} from 'react';
 import '../styles/Laec.scss';
 import $ from 'jquery'
 import Line from './Line';
+import CONSTANTS from '../constants';
 
 const Laec: FC = () => {
 
@@ -33,11 +34,11 @@ const Laec: FC = () => {
                 <Line/>
                 <div className={'laec__cta__buttons'}>
                     <button className={'laec__cta__buttons__contre-mandat'}>Le Contre-Mandat 2017-2022</button>
-                    <a href={process.env.REACT_APP_LAEC} target={'_blank'} rel={'noreferrer'}>
+                    <a href={CONSTANTS.REACT_APP_LAEC} target={'_blank'} rel={'noreferrer'}>
                         <button className={'laec__cta__buttons__laec'}>L'Avenir En Commun 2022</button>
                     </a>
                 </div>
-                <p className={'laec__2022'}><a href={process.env.REACT_APP_LAEC} target={'_blank'} rel={'noreferrer'}><span className={'blue'}>20</span><span
+                <p className={'laec__2022'}><a href={CONSTANTS.REACT_APP_LAEC} target={'_blank'} rel={'noreferrer'}><span className={'blue'}>20</span><span
                     className={'red'}>22</span></a></p>
             </div>
         </div>

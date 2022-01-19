@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import '../styles/Home.scss';
 import Line from './Line';
 import Networks from './Networks';
+import CONSTANTS from '../constants';
 
 interface Props {
     onAction: () => void;
@@ -19,7 +20,7 @@ const Home: FC<Props> = ({onAction}) => {
             </div>
             <div className={'home__description'}>
                 <p className={'home__description__content'}><strong>Le contre mandat</strong> est un projet développé avec le <a
-                    href={process.env.REACT_APP_DI_DISCORD}>Discord
+                    href={CONSTANTS.REACT_APP_DI_DISCORD}>Discord
                     Insoumis</a>.</p>
                 <p className={'home__description__content'}>Le site permet de visualiser les contre-propositions réalisées par le groupe parlementaire de la
                     France Insoumise
