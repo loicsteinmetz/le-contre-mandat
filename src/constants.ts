@@ -15,7 +15,7 @@ const CONSTANTS: any = {
     REACT_APP_DI_TIKTOK: 'https://www.tiktok.com/@distokinsoumis?',
     REACT_APP_DI_TWITCH: 'https://www.twitch.tv/DiscordInsoumis',
     REACT_APP_DI_INSTAGRAM: 'https://www.instagram.com/discordinsoumis/',
-    REACT_APP_LAEC: 'https://laec.fr/'
+    REACT_APP_LAEC: 'https://melenchon2022.fr/programme/'
 }
 
 export default CONSTANTS;
