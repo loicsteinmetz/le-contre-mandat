@@ -71,8 +71,8 @@ const Main: FC = () => {
                 onSelectRight={onSelectRight}
             />
             <button className={'main__infos'}>Toutes les mesures</button>
-            <Video select={year}/>
             <Networks marginTop={50}/>
+            <Video select={year}/>
             <Detail select={year}/>
             <Line/>
             <Doc select={year}/>
