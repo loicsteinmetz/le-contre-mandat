@@ -7,6 +7,7 @@ const CONSTANTS: any = {
     REACT_APP_VIDEO_18: 'EDcJHVd-Eg4',
     REACT_APP_VIDEO_19: 'sPXMxteD0nw',
     REACT_APP_VIDEO_20: 'nlIWDyk_25Y',
+    REACT_APP_VIDEO_21: 'QzxRhurLwrE',
     REACT_APP_VIDEO_22: 'CLreyGJNruk',
     REACT_APP_DI_DISCORD: 'https://discord-insoumis.fr/',
     REACT_APP_DI_FACEBOOK: 'https://www.facebook.com/discordinsoumis',
